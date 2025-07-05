@@ -1,0 +1,39 @@
+LOGS START
+MESSAGE BY CLIENT/NEW_SS: $1
+127.0.0.1
+8081
+?folderX *folderX/file1.txt ?folderX/folderXX *folderX/folderXX/file.txt ?folderY *folderY/file2.txt
+SS_PORTS[1] = 8081
+New connection with SS_1 has been established
+MESSAGE BY CLIENT/NEW_SS: $2
+127.0.0.1
+8083
+?folder1 *folder1/anime.txt ?folder2 *folder2/study.txt
+SS_PORTS[2] = 8083
+New connection with SS_2 has been established
+MESSAGE BY CLIENT/NEW_SS: COPY folder1 folder2/study.txt
+PORT: 2 8083
+Sent COPYFILE folder1 folder2/study.txt to SS_2
+MESSAGE BY CLIENT/NEW_SS: COPY folder1 folderX/file1.txt
+Executing: COPY |folder1| |folderX/file1.txt|
+COMMAND TO SS_1: READ folderX/file1.txt folder1/file1.txt
+PORT: 1 8081
+Sent READ folderX/file1.txt folder1/file1.txt to SS_1
+Writing into file folder1/file1.txt this content
+|CREATEFILE folder1/file1.txt Canadians
+HUBBLE telescope
+what do they have in common
+Shine? Black color?
+Racism? A telescope can be racist too.
+Oh so the talk was about the current conflict betweeen India and Canada.
+|
+PORT: 2 8083
+Sent CREATEFILE folder1/file1.txt Canadians
+HUBBLE telescope
+what do they have in common
+Shine? Black color?
+Racism? A telescope can be racist too.
+Oh so the talk was about the current conflict betweeen India and Canada.
+ to SS_2
+B. Inserting |folder1/file1.txt| in SS_2's Trie
+MESSAGE BY CLIENT/NEW_SS: READ folderX/folderXX/file.txt
